@@ -1,0 +1,24 @@
+<div class = "container text-center">
+  <div class = "task-wrapper">
+    <h1>Restaurants: Index</h1>
+
+    <% @restaurants.each do |restaurant| %>
+      <h2><%= restaurant.name %></h2>
+      <p><%= restaurant.address %></p>
+      <p><%= restaurant.category.capitalize %></p>
+      <p><%= restaurant.reviews %></p>
+      <p> Restaurant Number: <%= restaurant.id %></p>
+
+      <div>
+        <%= link_to 'Select', restaurant, class: 'btn btn-success' %>
+
+
+        <%= link_to "Delete" , restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger' %>
+
+      </div>
+    <%end%>
+
+    </br>
+
+  </div>
+</div>
