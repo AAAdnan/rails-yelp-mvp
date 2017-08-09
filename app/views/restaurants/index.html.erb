@@ -15,10 +15,13 @@
 
         <%= link_to "Delete" , restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger' %>
 
+        <%= link_to 'Add review', new_restaurant_review_path(restaurant.id), class: 'btn btn-success' %>
+
       </div>
     <%end%>
 
     </br>
 
+    <%= link_to 'Add new', new_restaurant_path, class: 'btn btn-primary' %>
   </div>
 </div>
